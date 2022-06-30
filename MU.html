@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MU V1</title>
+        <script>
+
+            var S = prompt("Insira a posição final do objeto em Km (S). Se tal informação for desconhecida, digite -1")
+            var S0 = prompt("Insira a posição inicial do objeto em Km (S0). Se tal informação for desconhecida, digite -1")
+            var t = prompt("Insira o tempo que foi tomado para o deslocamento do objeto (da posição inicial para a final) em horas (t). Se tal informação for desconhecida, digite -1")
+            var v = prompt("Insira a velocidade média do automóvel durante o percurso (da posição inicial para a final) em Km/h (v). Se tal informação for desconhecida, digite -1")
+
+            S = parseFloat(S)
+            S0 = parseFloat(S0)
+            t = parseFloat(t)
+            v = parseFloat(v)
+
+            if(S == -1){
+                document.write("S = " + (S0 + t * v) + "Km")
+            }
+            else if(t == -1){
+                document.write("t = " + ((S - S0) / v) + " horas")
+            }
+            else if(v == -1){
+                document.write("v = " + ((S - S0) / t)+ "Km/h" + "<br>" + "v = " + (((S - S0) / t) / 3.6) + "m/s")
+            }
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
